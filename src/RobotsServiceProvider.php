@@ -4,7 +4,7 @@ namespace Robots;
 
 use Illuminate\Support\ServiceProvider;
 
-class HreflangsServiceProvider extends ServiceProvider
+class RobotsServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap services.
