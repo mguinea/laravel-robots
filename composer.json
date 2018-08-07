@@ -1,0 +1,49 @@
+{
+    "name": "mguinea/laravel-robots",
+    "description": "Laravel package to manage robots in an easy way",
+    "keywords": [
+        "robots",
+        "laravel"
+    ],
+    "homepage": "https://github.com/mguinea/laravel-robots",
+    "type": "laravel-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marc Guinea",
+            "email": "develop.marcguinea@gmail.com"
+        }
+    ],
+    "require": {
+        "php" : ">=7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+		"orchestra/testbench": "~3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Robots\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Robots\\Tests\\": "tests"
+        }
+    },
+	"scripts": {
+        "test": [
+            "vendor/bin/phpunit"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Robots\\RobotsServiceProvider"
+            ]
+        }
+    }
+}
