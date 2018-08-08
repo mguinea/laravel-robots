@@ -5,14 +5,14 @@ namespace Robots;
 class Robots
 {
     /**
-     * The rows of for the robots.txt
+     * The rows of for the robots
      *
      * @var array
      */
     protected $rows = array();
 
     /**
-     * Add a allow rule to the robots.txt.
+     * Add a allow rule to the robots.
      *
      * @param string|array $directories
      */
@@ -22,7 +22,7 @@ class Robots
     }
 
     /**
-     * Add a comment to the robots.txt.
+     * Add a comment to the robots.
      *
      * @param string $comment
      */
@@ -32,7 +32,7 @@ class Robots
     }
 
     /**
-     * Add a disallow rule to the robots.txt.
+     * Add a disallow rule to the robots.
      *
      * @param string|array $directories
      */
@@ -42,7 +42,7 @@ class Robots
     }
 
     /**
-     * Add a Host to the robots.txt.
+     * Add a Host to the robots.
      *
      * @param string $host
      */
@@ -52,7 +52,7 @@ class Robots
     }
 
     /**
-     * Add a row to the robots.txt.
+     * Add a row to the robots.
      *
      * @param string $row
      */
@@ -62,7 +62,7 @@ class Robots
     }
 
     /**
-     * Add multiple rows to the robots.txt.
+     * Add multiple rows to the robots.
      *
      * @param string|array $rows
      */
@@ -75,7 +75,7 @@ class Robots
     }
 
     /**
-     * Add a rule to the robots.txt.
+     * Add a rule to the robots.
      *
      * @param string|array $directories
      * @param string       $rule
@@ -89,7 +89,7 @@ class Robots
     }
 
     /**
-     * Add a Sitemap to the robots.txt.
+     * Add a Sitemap to the robots.
      *
      * @param string $sitemap
      */
@@ -99,7 +99,7 @@ class Robots
     }
 
     /**
-     * Add a spacer to the robots.txt.
+     * Add a spacer to the robots.
      */
     public function addSpacer()
     {
@@ -107,7 +107,7 @@ class Robots
     }
 
     /**
-     * Add a User-agent to the robots.txt.
+     * Add a User-agent to the robots.
      *
      * @param string $userAgent
      */
@@ -117,7 +117,7 @@ class Robots
     }
 
     /**
-     * Generate the robots.txt data.
+     * Generate the robots data.
      *
      * @return string
      */

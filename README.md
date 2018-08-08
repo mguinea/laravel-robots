@@ -5,18 +5,6 @@ Laravel package to manage robots in an easy way
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Laravel 5.6.x](https://img.shields.io/badge/Laravel-5.x-orange.svg)](http://laravel.com)
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
 ### Installing
 
 You can install via Composer.
@@ -43,9 +31,13 @@ Just execute
 $ composer test
 ```
 
+Unit tests will test all methods from Robots class and its related facade.
+
 ## Usage
 
-Add additional notes about how to deploy this on a live system
+### 1. Dynamically
+
+You can use Robots facade in route to generate a dynamic response
 
 ```php
 <?php
@@ -67,9 +59,9 @@ Route::get('robots.txt', function() {
 
 ## Built With
 
-* [Laravel](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Composer](https://maven.apache.org/) - Dependency Management
-* [Atom](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Laravel](https://laravel.com/) - The web framework
+* [Composer](https://getcomposer.org/) - Dependency manager
+* [Atom](https://atom.io/) - Text editor
 
 ## Versioning
 
