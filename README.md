@@ -47,6 +47,24 @@ $ composer test
 
 Add additional notes about how to deploy this on a live system
 
+```php
+<?php
+
+Route::get('robots.txt', function() {
+
+    // If on the live server
+    if (App::environment() == 'production') {
+        Robots::addUserAgent('*');
+        Robots::addSitemap('sitemap.xml');
+    } else {
+        // If you're on any other server, tell everyone to go away.
+        Robots::addDisallow('*');
+    }
+
+    return Response::make(Robots::generate(), 200, array('Content-Type' => 'text/plain'));
+});
+```
+
 ## Built With
 
 * [Laravel](http://www.dropwizard.io/1.0.2/docs/) - The web framework used

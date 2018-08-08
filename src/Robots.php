@@ -52,13 +52,13 @@ class Robots
     }
 
     /**
-     * Add a line to the robots.txt.
+     * Add a row to the robots.txt.
      *
-     * @param string $line
+     * @param string $row
      */
-    protected function addLine($line)
+    protected function addLine($row)
     {
-        $this->rows[] = (string) $line;
+        $this->rows[] = (string) $row;
     }
 
     /**
@@ -68,9 +68,9 @@ class Robots
      */
     protected function addRows($rows)
     {
-        foreach ((array) $rows as $line)
+        foreach ((array) $rows as $row)
         {
-            $this->addLine($line);
+            $this->addLine($row);
         }
     }
 
