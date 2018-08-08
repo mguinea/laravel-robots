@@ -32,7 +32,7 @@ class Robots implements RobotsContract
      * @param string $comment
      * @return \Robots\Contracts\Robot;
      */
-    public function addComment($comment): RobotsContract
+    public function addComment(string $comment): RobotsContract
     {
         $this->addLine("# $comment");
 
@@ -58,7 +58,7 @@ class Robots implements RobotsContract
      * @param string $host
      * @return \Robots\Contracts\Robot;
      */
-    public function addHost($host): RobotsContract
+    public function addHost(string $host): RobotsContract
     {
         $this->addLine("Host: $host");
 
@@ -106,7 +106,7 @@ class Robots implements RobotsContract
      * @param string $sitemap
      * @return \Robots\Contracts\Robot;
      */
-    public function addSitemap($sitemap): RobotsContract
+    public function addSitemap(string $sitemap): RobotsContract
     {
         $this->addLine("Sitemap: $sitemap");
 
@@ -130,7 +130,7 @@ class Robots implements RobotsContract
      * @param string $userAgent
      * @return \Robots\Contracts\Robot;
      */
-    public function addUserAgent($userAgent): RobotsContract
+    public function addUserAgent(string $userAgent): RobotsContract
     {
         $this->addLine("User-agent: $userAgent");
 
