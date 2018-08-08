@@ -10,6 +10,7 @@ If you need a detailed explanation about how robots.txt file works, visit http:/
 [![Github All Releases](https://img.shields.io/github/downloads/mguinea/laravel-robots/total.svg)](https://packagist.org/packages/mguinea/laravel-robots)
 [![Quality Score](https://img.shields.io/scrutinizer/g/mguinea/laravel-robots.svg)](https://scrutinizer-ci.com/g/mguinea/laravel-robots)
 [![StyleCI](https://styleci.io/repos/143919791/shield?branch=master)](https://styleci.io/repos/143919791)
+[![Build Status](https://travis-ci.org/mguinea/laravel-robots.svg?branch=master)](https://travis-ci.org/mguinea/laravel-robots)
 
 ### Installing
 
@@ -109,6 +110,9 @@ class Anywhere
 }
 
 ```
+
+### 3. Building from Data Source
+
 
 ### Methods
 
