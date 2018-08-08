@@ -2,7 +2,6 @@
 
 namespace Robots\Tests;
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Robots\Facades\Robots;
 
 class RobotsFacadeTest extends TestCase
@@ -30,14 +29,13 @@ class RobotsFacadeTest extends TestCase
         $this->assertEquals("Allow: foo\nAllow: bar", Robots::generate());
     }
 
-
     public function testFacadeAddComments()
     {
         Robots::reset();
 
         Robots::addComment('foo');
 
-		$this->assertEquals('# foo', Robots::generate());
+        $this->assertEquals('# foo', Robots::generate());
     }
 
     public function testFacadeAddDisallow()
@@ -46,7 +44,7 @@ class RobotsFacadeTest extends TestCase
 
         Robots::addDisallow('foo');
 
-		$this->assertEquals('Disallow: foo', Robots::generate());
+        $this->assertEquals('Disallow: foo', Robots::generate());
     }
 
     public function testAddDisallows()
@@ -64,7 +62,7 @@ class RobotsFacadeTest extends TestCase
 
         Robots::addHost('foo');
 
-		$this->assertEquals('Host: foo', Robots::generate());
+        $this->assertEquals('Host: foo', Robots::generate());
     }
 
     public function testFacadeAddSitemap()
@@ -73,7 +71,7 @@ class RobotsFacadeTest extends TestCase
 
         Robots::addSitemap('foo');
 
-		$this->assertEquals('Sitemap: foo', Robots::generate());
+        $this->assertEquals('Sitemap: foo', Robots::generate());
     }
 
     public function testFacadeAddSpacer()
@@ -82,7 +80,7 @@ class RobotsFacadeTest extends TestCase
 
         Robots::addSpacer();
 
-		$this->assertEquals('', Robots::generate());
+        $this->assertEquals('', Robots::generate());
     }
 
     public function testFacadeAddUserAgent()
@@ -91,6 +89,6 @@ class RobotsFacadeTest extends TestCase
 
         Robots::addUserAgent('foo');
 
-		$this->assertEquals('User-agent: foo', Robots::generate());
+        $this->assertEquals('User-agent: foo', Robots::generate());
     }
 }
