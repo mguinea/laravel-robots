@@ -4,13 +4,13 @@ namespace Robots\Contracts;
 
 interface Robots
 {
-	/**
-	 * Add a allow rule to the robots.
-	 *
-	 * @param string|array $directories
-	 * @return \Robots\Contracts\Robot;
-	 */
-	public function addAllow(string $directories): self;
+    /**
+     * Add a allow rule to the robots.
+     *
+     * @param string|array $directories
+     * @return \Robots\Contracts\Robot;
+     */
+    public function addAllow(string $directories): self;
 
     /**
      * Add a comment to the robots.
