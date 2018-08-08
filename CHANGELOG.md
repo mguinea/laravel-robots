@@ -2,6 +2,9 @@
 
 All notable changes to `laravel-robots` will be documented in this file
 
+## 0.1.2 - 2018-08-08
+- Updated README
+
 ## 0.1.1 - 2018-08-08
 - Add Robots contract
 
