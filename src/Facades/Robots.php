@@ -5,9 +5,7 @@ namespace Robots\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class RobotsFacade
- *
- * @package Robots
+ * Class RobotsFacade.
  */
 class Robots extends Facade
 {

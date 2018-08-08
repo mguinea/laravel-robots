@@ -7,11 +7,11 @@ use Robots\Contracts\Robots as RobotsContract;
 class Robots implements RobotsContract
 {
     /**
-     * The rows of for the robots
+     * The rows of for the robots.
      *
      * @var array
      */
-    protected $rows = array();
+    protected $rows = [];
 
     /**
      * Add a allow rule to the robots.
@@ -22,6 +22,7 @@ class Robots implements RobotsContract
     public function addAllow($directories): RobotsContract
     {
         $this->addRuleLine($directories, 'Allow');
+
         return $this;
     }
 
@@ -34,6 +35,7 @@ class Robots implements RobotsContract
     public function addComment($comment): RobotsContract
     {
         $this->addLine("# $comment");
+
         return $this;
     }
 
@@ -46,6 +48,7 @@ class Robots implements RobotsContract
     public function addDisallow($directories): RobotsContract
     {
         $this->addRuleLine($directories, 'Disallow');
+
         return $this;
     }
 
@@ -58,6 +61,7 @@ class Robots implements RobotsContract
     public function addHost($host): RobotsContract
     {
         $this->addLine("Host: $host");
+
         return $this;
     }
 
@@ -78,8 +82,7 @@ class Robots implements RobotsContract
      */
     protected function addRows($rows)
     {
-        foreach ((array) $rows as $row)
-        {
+        foreach ((array) $rows as $row) {
             $this->addLine($row);
         }
     }
@@ -92,8 +95,7 @@ class Robots implements RobotsContract
      */
     protected function addRuleLine($directories, $rule)
     {
-        foreach ((array) $directories as $directory)
-        {
+        foreach ((array) $directories as $directory) {
             $this->addLine("$rule: $directory");
         }
     }
@@ -107,6 +109,7 @@ class Robots implements RobotsContract
     public function addSitemap($sitemap): RobotsContract
     {
         $this->addLine("Sitemap: $sitemap");
+
         return $this;
     }
 
@@ -116,7 +119,8 @@ class Robots implements RobotsContract
      */
     public function addSpacer(): RobotsContract
     {
-        $this->addLine("");
+        $this->addLine('');
+
         return $this;
     }
 
@@ -129,6 +133,7 @@ class Robots implements RobotsContract
     public function addUserAgent($userAgent): RobotsContract
     {
         $this->addLine("User-agent: $userAgent");
+
         return $this;
     }
 
@@ -149,7 +154,8 @@ class Robots implements RobotsContract
      */
     public function reset(): RobotsContract
     {
-        $this->rows = array();
+        $this->rows = [];
+
         return $this;
     }
 }

@@ -2,9 +2,8 @@
 
 namespace Robots\Tests;
 
-use Illuminate\Database\Schema\Blueprint;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Robots\Robots;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra
 {
@@ -26,7 +25,7 @@ abstract class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            \Robots\RobotsServiceProvider::class
+            \Robots\RobotsServiceProvider::class,
         ];
     }
 }
