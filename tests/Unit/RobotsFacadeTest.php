@@ -21,6 +21,15 @@ class RobotsFacadeTest extends TestCase
         $this->assertEquals('Allow: foo', Robots::generate());
     }
 
+    public function testAddAllows()
+    {
+        Robots::reset();
+
+        Robots::addAllow(['foo', 'bar']);
+
+        $this->assertEquals("Allow: foo\nAllow: bar", Robots::generate());
+    }
+
 
     public function testFacadeAddComments()
     {
@@ -38,6 +47,15 @@ class RobotsFacadeTest extends TestCase
         Robots::addDisallow('foo');
 
 		$this->assertEquals('Disallow: foo', Robots::generate());
+    }
+
+    public function testAddDisallows()
+    {
+        Robots::reset();
+
+        Robots::addDisallow(['foo', 'bar']);
+
+        $this->assertEquals("Disallow: foo\nDisallow: bar", Robots::generate());
     }
 
     public function testFacadeAddHost()

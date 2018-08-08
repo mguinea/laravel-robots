@@ -20,6 +20,15 @@ class RobotsTest extends TestCase
         $this->assertEquals('Allow: foo', $this->robots->generate());
     }
 
+    public function testAddAllows()
+    {
+        $this->robots->reset();
+
+        $this->robots->addAllow(['foo', 'bar']);
+
+        $this->assertEquals("Allow: foo\nAllow: bar", $this->robots->generate());
+    }
+
     public function testAddComments()
     {
         $this->robots->reset();
@@ -36,6 +45,15 @@ class RobotsTest extends TestCase
         $this->robots->addDisallow('foo');
 
 		$this->assertEquals('Disallow: foo', $this->robots->generate());
+    }
+
+    public function testAddDisallows()
+    {
+        $this->robots->reset();
+
+        $this->robots->addDisallow(['foo', 'bar']);
+
+        $this->assertEquals("Disallow: foo\nDisallow: bar", $this->robots->generate());
     }
 
     public function testAddHost()
@@ -72,5 +90,14 @@ class RobotsTest extends TestCase
         $this->robots->addUserAgent('foo');
 
 		$this->assertEquals('User-agent: foo', $this->robots->generate());
+    }
+
+    public function testConcatenate()
+    {
+        $response = $this->robots->reset()
+                                    ->addUserAgent('foo')
+                                    ->generate();
+
+        $this->assertEquals('User-agent: foo', $response);
     }
 }

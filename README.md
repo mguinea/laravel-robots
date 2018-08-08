@@ -37,7 +37,29 @@ Unit tests will test all methods from Robots class and its related facade.
 
 ### 1. Dynamically
 
-You can use Robots facade in route to generate a dynamic response
+You can use Robots in routes file to generate a dynamic response
+
+```php
+<?php
+
+Route::get('robots.txt', function() {
+    $robots = new \Robots\Robots;
+
+    // If on the live server
+    if (App::environment() == 'production') {
+        $robots->addUserAgent('*')->addSitemap('sitemap.xml');
+    } else {
+        // If you're on any other server, tell everyone to go away.
+        $robots->addDisallow('*');
+    }
+
+    return Response::make($robots->generate(), 200, array('Content-Type' => 'text/plain'));
+});
+```
+
+### 1.1. Dynamically with facade
+
+You can use Robots facade in routes file to generate a dynamic response
 
 ```php
 <?php
@@ -56,6 +78,7 @@ Route::get('robots.txt', function() {
     return Response::make(Robots::generate(), 200, array('Content-Type' => 'text/plain'));
 });
 ```
+### Methods
 
 ## Built With
 

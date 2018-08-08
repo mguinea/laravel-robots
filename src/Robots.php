@@ -2,7 +2,9 @@
 
 namespace Robots;
 
-class Robots
+use Robots\Contracts\Robots as RobotsContract;
+
+class Robots implements RobotsContract
 {
     /**
      * The rows of for the robots
@@ -15,40 +17,48 @@ class Robots
      * Add a allow rule to the robots.
      *
      * @param string|array $directories
+     * @return \Robots\Contracts\Robot;
      */
-    public function addAllow($directories)
+    public function addAllow($directories): RobotsContract
     {
         $this->addRuleLine($directories, 'Allow');
+        return $this;
     }
 
     /**
      * Add a comment to the robots.
      *
      * @param string $comment
+     * @return \Robots\Contracts\Robot;
      */
-    public function addComment($comment)
+    public function addComment($comment): RobotsContract
     {
         $this->addLine("# $comment");
+        return $this;
     }
 
     /**
      * Add a disallow rule to the robots.
      *
      * @param string|array $directories
+     * @return \Robots\Contracts\Robot;
      */
-    public function addDisallow($directories)
+    public function addDisallow($directories): RobotsContract
     {
         $this->addRuleLine($directories, 'Disallow');
+        return $this;
     }
 
     /**
      * Add a Host to the robots.
      *
      * @param string $host
+     * @return \Robots\Contracts\Robot;
      */
-    public function addHost($host)
+    public function addHost($host): RobotsContract
     {
         $this->addLine("Host: $host");
+        return $this;
     }
 
     /**
@@ -92,28 +102,34 @@ class Robots
      * Add a Sitemap to the robots.
      *
      * @param string $sitemap
+     * @return \Robots\Contracts\Robot;
      */
-    public function addSitemap($sitemap)
+    public function addSitemap($sitemap): RobotsContract
     {
         $this->addLine("Sitemap: $sitemap");
+        return $this;
     }
 
     /**
      * Add a spacer to the robots.
+     * @return \Robots\Contracts\Robot;
      */
-    public function addSpacer()
+    public function addSpacer(): RobotsContract
     {
         $this->addLine("");
+        return $this;
     }
 
     /**
      * Add a User-agent to the robots.
      *
      * @param string $userAgent
+     * @return \Robots\Contracts\Robot;
      */
-    public function addUserAgent($userAgent)
+    public function addUserAgent($userAgent): RobotsContract
     {
         $this->addLine("User-agent: $userAgent");
+        return $this;
     }
 
     /**
@@ -121,7 +137,7 @@ class Robots
      *
      * @return string
      */
-    public function generate()
+    public function generate(): string
     {
         return implode(PHP_EOL, $this->rows);
     }
@@ -129,10 +145,11 @@ class Robots
     /**
      * Reset the rows.
      *
-     * @return void
+     * @return \Robots\Contracts\Robot;
      */
-    public function reset()
+    public function reset(): RobotsContract
     {
         $this->rows = array();
+        return $this;
     }
 }
