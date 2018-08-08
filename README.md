@@ -53,7 +53,7 @@ Route::get('robots.txt', function() {
         $robots->addDisallow('*');
     }
 
-    return Response::make($robots->generate(), 200, array('Content-Type' => 'text/plain'));
+    return response($robots->generate(), 200)->header('Content-Type', 'text/plain');
 });
 ```
 
@@ -75,7 +75,7 @@ Route::get('robots.txt', function() {
         Robots::addDisallow('*');
     }
 
-    return Response::make(Robots::generate(), 200, array('Content-Type' => 'text/plain'));
+    return response(Robots::generate(), 200)->header('Content-Type', 'text/plain');
 });
 ```
 ### Methods
