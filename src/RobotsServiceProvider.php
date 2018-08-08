@@ -18,9 +18,7 @@ class RobotsServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
-    }
+    public function boot(){}
 
     /**
      * Register the service provider.
