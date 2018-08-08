@@ -2,8 +2,6 @@
 
 namespace Robots\Tests;
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-
 class RobotsTest extends TestCase
 {
     public function setUp()
@@ -35,7 +33,7 @@ class RobotsTest extends TestCase
 
         $this->robots->addComment('foo');
 
-		$this->assertEquals('# foo', $this->robots->generate());
+        $this->assertEquals('# foo', $this->robots->generate());
     }
 
     public function testAddDisallow()
@@ -44,7 +42,7 @@ class RobotsTest extends TestCase
 
         $this->robots->addDisallow('foo');
 
-		$this->assertEquals('Disallow: foo', $this->robots->generate());
+        $this->assertEquals('Disallow: foo', $this->robots->generate());
     }
 
     public function testAddDisallows()
@@ -62,7 +60,7 @@ class RobotsTest extends TestCase
 
         $this->robots->addHost('foo');
 
-		$this->assertEquals('Host: foo', $this->robots->generate());
+        $this->assertEquals('Host: foo', $this->robots->generate());
     }
 
     public function testAddSitemap()
@@ -71,7 +69,7 @@ class RobotsTest extends TestCase
 
         $this->robots->addSitemap('foo');
 
-		$this->assertEquals('Sitemap: foo', $this->robots->generate());
+        $this->assertEquals('Sitemap: foo', $this->robots->generate());
     }
 
     public function testAddSpacer()
@@ -80,7 +78,7 @@ class RobotsTest extends TestCase
 
         $this->robots->addSpacer();
 
-		$this->assertEquals('', $this->robots->generate());
+        $this->assertEquals('', $this->robots->generate());
     }
 
     public function testAddUserAgent()
@@ -89,7 +87,7 @@ class RobotsTest extends TestCase
 
         $this->robots->addUserAgent('foo');
 
-		$this->assertEquals('User-agent: foo', $this->robots->generate());
+        $this->assertEquals('User-agent: foo', $this->robots->generate());
     }
 
     public function testConcatenate()
