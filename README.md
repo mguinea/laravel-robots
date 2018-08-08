@@ -1,9 +1,11 @@
 # Laravel Robots
 
-Laravel package to manage robots in an easy way
+Laravel package to manage robots in an easy way.
+
+If you need a detailed explanation about how robots.txt file works, visit http://www.robotstxt.org/robotstxt.html
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Laravel 5.6.x](https://img.shields.io/badge/Laravel-5.x-orange.svg)](http://laravel.com)
+[![Laravel 5.6.x](https://img.shields.io/badge/Laravel-5.6.x-orange.svg)](http://laravel.com)
 
 ### Installing
 
@@ -161,3 +163,10 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## TODO
+- File writer service and tests
+- Add building from a Data Source
+- Add to README some tags, travis, downloads...
+- Upload to Packalyst and Packagist
+- Write a post about this package
