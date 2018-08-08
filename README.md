@@ -6,6 +6,7 @@ If you need a detailed explanation about how robots.txt file works, visit http:/
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Laravel 5.6.x](https://img.shields.io/badge/Laravel-5.6.x-orange.svg)](http://laravel.com)
+[![Total Downloads](https://img.shields.io/packagist/dt/mguinea/laravel-robots.svg?style=flat-square)](https://packagist.org/packages/mguinea/laravel-robots)
 
 ### Installing
 
