@@ -4,9 +4,10 @@ Laravel package to manage robots in an easy way.
 
 If you need a detailed explanation about how robots.txt file works, visit http://www.robotstxt.org/robotstxt.html
 
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
 [![Laravel 5.6.x](https://img.shields.io/badge/Laravel-5.6.x-orange.svg)](http://laravel.com)
-[![Total Downloads](https://img.shields.io/packagist/dt/mguinea/laravel-robots.svg?style=flat-square)](https://packagist.org/packages/mguinea/laravel-robots)
+[![Packagist](https://img.shields.io/packagist/dt/mguinea/laravel-robots.svg)](https://packagist.org/packages/mguinea/laravel-robots)
+[![Github All Releases](https://img.shields.io/github/downloads/mguinea/laravel-robots/total.svg)](https://packagist.org/packages/mguinea/laravel-robots)
 
 ### Installing
 
@@ -67,6 +68,8 @@ You can use Robots facade in routes file to generate a dynamic response
 ```php
 <?php
 
+use Robots\Facades\Robots;
+
 Route::get('robots.txt', function() {
 
     // If on the live server
@@ -81,6 +84,30 @@ Route::get('robots.txt', function() {
     return response(Robots::generate(), 200)->header('Content-Type', 'text/plain');
 });
 ```
+
+### 2. To robots.txt default file
+
+If you prefer to write the original robots.txt file, just use the generator as you have seen
+
+```php
+<?php
+
+use Illuminate\Http\File;
+use Robots\Robots;
+
+class Anywhere
+{
+    public function createFile()
+    {
+        $robots = new Robots;
+        $robots->addUserAgent('*')->addSitemap('sitemap.xml');
+
+        File::put(public_path('robots.txt'), $robots->generate());
+    }
+}
+
+```
+
 ### Methods
 
 You can use Robots class methods in an individual or nested way.
@@ -166,8 +193,6 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## TODO
-- File writer service and tests
 - Add building from a Data Source
 - Add to README some tags, travis, downloads...
-- Upload to Packalyst and Packagist
 - Write a post about this package
