@@ -80,6 +80,70 @@ Route::get('robots.txt', function() {
 ```
 ### Methods
 
+You can use Robots class methods in an individual or nested way.
+
+Remember that you can use Facade to avoid instantiation.
+
+```php
+<?php
+    // Add an allow rule to the robots. Allow: foo
+    $robots->addAllow('foo');
+
+    // Add multiple allows rules to the robots. Allow: foo Allow: bar
+    $robots->addAllow(['foo', 'bar']);
+```
+
+```php
+<?php
+    // Add a comment to the robots. # foo
+    $robots->addComment('foo');
+```
+
+```php
+<?php
+    // Add a disallow rule to the robots. Disallow: foo
+    $robots->addDisallow('foo');
+
+    // Add multiple disallows rules to the robots. Disallow: foo Disallow: bar
+    $robots->addDisallow(['foo', 'bar']);
+```
+
+```php
+<?php
+    // Add a Host to the robots. Host: foo
+    $robots->addHost('foo');
+```
+
+```php
+<?php
+    // Add a Sitemap to the robots. Sitemap: foo
+    $robots->addSitemap('foo');
+```
+
+```php
+<?php
+    // Add a spacer to the robots.
+    $robots->addSpacer();
+```
+
+```php
+<?php
+    // Add a User-agent to the robots. User-agent: foo
+    $robots->addUserAgent('foo');
+```
+
+```php
+<?php
+    // Generate the robots data.
+    $robots->generate();
+```
+
+```php
+<?php
+    // Reset the rows.
+    $robots->reset();
+```
+
 ## Built With
 
 * [Laravel](https://laravel.com/) - The web framework
