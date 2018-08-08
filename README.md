@@ -8,6 +8,7 @@ If you need a detailed explanation about how robots.txt file works, visit http:/
 [![Laravel 5.6.x](https://img.shields.io/badge/Laravel-5.6.x-orange.svg)](http://laravel.com)
 [![Packagist](https://img.shields.io/packagist/dt/mguinea/laravel-robots.svg)](https://packagist.org/packages/mguinea/laravel-robots)
 [![Github All Releases](https://img.shields.io/github/downloads/mguinea/laravel-robots/total.svg)](https://packagist.org/packages/mguinea/laravel-robots)
+[![Quality Score](https://img.shields.io/scrutinizer/g/mguinea/laravel-robots.svg)](https://scrutinizer-ci.com/g/mguinea/laravel-robots)
 
 ### Installing
 
