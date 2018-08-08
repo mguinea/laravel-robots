@@ -9,6 +9,7 @@ If you need a detailed explanation about how robots.txt file works, visit http:/
 [![Packagist](https://img.shields.io/packagist/dt/mguinea/laravel-robots.svg)](https://packagist.org/packages/mguinea/laravel-robots)
 [![Github All Releases](https://img.shields.io/github/downloads/mguinea/laravel-robots/total.svg)](https://packagist.org/packages/mguinea/laravel-robots)
 [![Quality Score](https://img.shields.io/scrutinizer/g/mguinea/laravel-robots.svg)](https://scrutinizer-ci.com/g/mguinea/laravel-robots)
+[![StyleCI](https://styleci.io/repos/143919791/shield?branch=master)](https://styleci.io/repos/143919791)
 
 ### Installing
 
