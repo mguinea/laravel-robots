@@ -10,7 +10,7 @@ interface Robots
      * @param string|array $directories
      * @return \Robots\Contracts\Robot;
      */
-    public function addAllow(string $directories): self;
+    public function addAllow($directories): self;
 
     /**
      * Add a comment to the robots.
@@ -26,7 +26,7 @@ interface Robots
      * @param string|array $directories
      * @return \Robots\Contracts\Robot;
      */
-    public function addDisallow(string $directories): self;
+    public function addDisallow($directories): self;
 
     /**
      * Add a Host to the robots.
