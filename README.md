@@ -7,8 +7,8 @@ If you need a detailed explanation about how robots.txt file works, visit http:/
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
 [![Laravel 5.6.x](https://img.shields.io/badge/Laravel-5.6.x-orange.svg)](http://laravel.com)
 [![Packagist](https://img.shields.io/packagist/dt/mguinea/laravel-robots.svg)](https://packagist.org/packages/mguinea/laravel-robots)
-[![Github All Releases](https://img.shields.io/github/downloads/mguinea/laravel-robots/total.svg)](https://packagist.org/packages/mguinea/laravel-robots)
 [![Quality Score](https://img.shields.io/scrutinizer/g/mguinea/laravel-robots.svg)](https://scrutinizer-ci.com/g/mguinea/laravel-robots)
+[![Code Coverage](https://scrutinizer-ci.com/g/mguinea/laravel-robots/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mguinea/laravel-robots/?branch=master)
 [![StyleCI](https://styleci.io/repos/143919791/shield?branch=master)](https://styleci.io/repos/143919791)
 [![Build Status](https://travis-ci.org/mguinea/laravel-robots.svg?branch=master)](https://travis-ci.org/mguinea/laravel-robots)
 
@@ -25,7 +25,7 @@ Or add the following to your composer.json file and run composer update:
 ```json
 {
     "require": {
-        "mguinea/laravel-robots": "dev-master"
+        "mguinea/laravel-robots": "^1.0.0"
     }
 }
 ```
