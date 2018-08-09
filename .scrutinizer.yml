@@ -17,11 +17,12 @@ checks:
         fix_identation_4spaces: true
         fix_doc_comments: true
 build:
-  nodes:
-    coverage:
-      tests:
+    environment:
+        php: '7.1'
+    tests:
         override:
-          - command: 'php vendor/bin/phpunit --coverage-clover=coverage'
+        -
+            command: vendor/bin/phpunit --coverage-clover=laravel-robots
             coverage:
-              file: coverage
-              format: php-clover
+                file: laravel-robots
+                format: clover
