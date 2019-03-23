@@ -22,7 +22,7 @@ build:
     tests:
         override:
         -
-            command: vendor/bin/phpunit --coverage-clover=laravel-robots
+            command: composer test --coverage-clover=laravel-robots
             coverage:
                 file: laravel-robots
                 format: clover

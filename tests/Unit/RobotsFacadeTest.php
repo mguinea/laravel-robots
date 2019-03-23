@@ -6,7 +6,7 @@ use Robots\Facades\Robots;
 
 class RobotsFacadeTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
     }

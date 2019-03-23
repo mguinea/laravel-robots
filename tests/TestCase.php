@@ -10,7 +10,7 @@ abstract class TestCase extends Orchestra
     /** @var \Robots\Robots */
     protected $robots;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
