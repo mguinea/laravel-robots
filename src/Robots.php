@@ -14,8 +14,7 @@ class Robots implements RobotsContract
     protected $rows = [];
 
     /**
-     *
-     * Array with configuration set in constructor
+     * Array with configuration set in constructor.
      *
      * @var array
      */
@@ -33,31 +32,29 @@ class Robots implements RobotsContract
     }
 
     /**
-     *
-     * Create Robots object from array
-     *
+     * Create Robots object from array.
      */
     private function composeFromParameters(): void
     {
-        foreach($this->parameters as $key => $values) {
-            if($key === 'allows') {
-                foreach($values as $value) {
+        foreach ($this->parameters as $key => $values) {
+            if ($key === 'allows') {
+                foreach ($values as $value) {
                     $this->addAllow($value);
                 }
-            } elseif($key === 'disallows') {
-                foreach($values as $value) {
+            } elseif ($key === 'disallows') {
+                foreach ($values as $value) {
                     $this->addDisallow($value);
                 }
-            } elseif($key === 'hosts') {
-                foreach($values as $value) {
+            } elseif ($key === 'hosts') {
+                foreach ($values as $value) {
                     $this->addHost($value);
                 }
-            } elseif($key === 'sitemaps') {
-                foreach($values as $value) {
+            } elseif ($key === 'sitemaps') {
+                foreach ($values as $value) {
                     $this->addSitemap($value);
                 }
-            } elseif($key === 'userAgents') {
-                foreach($values as $value) {
+            } elseif ($key === 'userAgents') {
+                foreach ($values as $value) {
                     $this->addUserAgent($value);
                 }
             }
