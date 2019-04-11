@@ -5,7 +5,7 @@ Laravel package to manage robots in an easy way.
 If you need a detailed explanation about how robots.txt file works, visit http://www.robotstxt.org/robotstxt.html
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
-[![Laravel 5.6.x](https://img.shields.io/badge/Laravel-5.6.x-orange.svg)](http://laravel.com)
+[![Laravel 5.8](https://img.shields.io/badge/Laravel-5.8-orange.svg)](http://laravel.com)
 [![Packagist](https://img.shields.io/packagist/dt/mguinea/laravel-robots.svg)](https://packagist.org/packages/mguinea/laravel-robots)
 [![Quality Score](https://img.shields.io/scrutinizer/g/mguinea/laravel-robots.svg)](https://scrutinizer-ci.com/g/mguinea/laravel-robots)
 [![Code Coverage](https://scrutinizer-ci.com/g/mguinea/laravel-robots/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mguinea/laravel-robots/?branch=master)
@@ -57,7 +57,7 @@ Route::get('robots.txt', function() {
         $robots->addUserAgent('*')->addSitemap('sitemap.xml');
     } else {
         // If you're on any other server, tell everyone to go away.
-        $robots->addDisallow('*');
+        $robots->addDisallow("/");
     }
 
     return response($robots->generate(), 200)->header('Content-Type', 'text/plain');
@@ -81,7 +81,7 @@ Route::get('robots.txt', function() {
         Robots::addSitemap('sitemap.xml');
     } else {
         // If you're on any other server, tell everyone to go away.
-        Robots::addDisallow('*');
+        Robots::addDisallow("/");
     }
 
     return response(Robots::generate(), 200)->header('Content-Type', 'text/plain');
@@ -192,13 +192,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Marc Guinea** - *Initial work* - [MarcGuinea](http://www.marcguinea.com)
+* **Marc Guinea** [MarcGuinea](https://www.marcguinea.com)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-
-## TODO
-- Add building from a Data Source
-- Add to README some tags, travis, downloads...
-- Write a post about this package

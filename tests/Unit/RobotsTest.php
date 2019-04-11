@@ -45,6 +45,15 @@ class RobotsTest extends TestCase
         $this->assertEquals('Disallow: foo', $this->robots->generate());
     }
 
+    public function testAddDisallowAll()
+    {
+        $this->robots->reset();
+
+        $this->robots->addDisallow("/");
+
+        $this->assertEquals('Disallow: /', $this->robots->generate());
+    }
+
     public function testAddDisallows()
     {
         $this->robots->reset();
