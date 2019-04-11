@@ -49,7 +49,7 @@ class RobotsTest extends TestCase
     {
         $this->robots->reset();
 
-        $this->robots->addDisallow("/");
+        $this->robots->addDisallow('/');
 
         $this->assertEquals('Disallow: /', $this->robots->generate());
     }
