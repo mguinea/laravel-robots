@@ -113,6 +113,43 @@ class Anywhere
 
 ### 3. Building from Data Source
 
+You could prefer building it from some data source. To get that, you just must instantiate Robots object using an array with key value parameters as shown below.
+
+Note that comments and spacers have been removed.
+
+```php
+<?php
+
+use Illuminate\Http\File;
+use Robots\Robots;
+
+class Anywhere
+{
+    public function fromArray()
+    {
+        $robots = new Robots([
+            'allows' => [
+                'foo', 'bar'
+            ],
+            'disallows' => [
+                'foo', 'bar'
+            ],
+            'hosts' => [
+                'foo', 'bar'
+            ],
+            'sitemaps' => [
+                'foo', 'bar'
+            ],
+            'userAgents' => [
+                'foo', 'bar'
+            ]
+        ]);
+        
+        return response($robots->generate(), 200)->header('Content-Type', 'text/plain');
+    }
+}
+
+```
 
 ### Methods
 
