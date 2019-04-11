@@ -25,7 +25,7 @@ Or add the following to your composer.json file and run composer update:
 ```json
 {
     "require": {
-        "mguinea/laravel-robots": "^1.0.0"
+        "mguinea/laravel-robots": "^1.1.0"
     }
 }
 ```
