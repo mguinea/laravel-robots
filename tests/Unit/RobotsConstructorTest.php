@@ -16,20 +16,20 @@ class RobotsConstructorTest extends Orchestra
 
         $this->robots = new Robots([
             'allows' => [
-                'foo', 'bar'
+                'foo', 'bar',
             ],
             'disallows' => [
-                'foo', 'bar'
+                'foo', 'bar',
             ],
             'hosts' => [
-                'foo', 'bar'
+                'foo', 'bar',
             ],
             'sitemaps' => [
-                'foo', 'bar'
+                'foo', 'bar',
             ],
             'userAgents' => [
-                'foo', 'bar'
-            ]
+                'foo', 'bar',
+            ],
         ]);
     }
 
@@ -48,8 +48,8 @@ class RobotsConstructorTest extends Orchestra
     {
         $robots = new Robots([
             'allows' => [
-                'foo', 'bar'
-            ]
+                'foo', 'bar',
+            ],
         ]);
         $expected = "Allow: foo\nAllow: bar";
         $this->assertEquals($expected, $robots->generate());
