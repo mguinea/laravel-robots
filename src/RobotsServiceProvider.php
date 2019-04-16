@@ -2,8 +2,8 @@
 
 namespace Robots;
 
-use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
 
 class RobotsServiceProvider extends ServiceProvider
@@ -23,11 +23,11 @@ class RobotsServiceProvider extends ServiceProvider
     public function boot(Filesystem $filesystem)
     {
         $this->publishes([
-            __DIR__ . '/../config/robots.php' => config_path('robots.php'),
+            __DIR__.'/../config/robots.php' => config_path('robots.php'),
         ], 'config');
 
         $this->publishes([
-            __DIR__ . '/../database/migrations/create_robots_tables.php.stub' => $this->getMigrationFileName($filesystem),
+            __DIR__.'/../database/migrations/create_robots_tables.php.stub' => $this->getMigrationFileName($filesystem),
         ], 'migrations');
     }
 
@@ -59,7 +59,8 @@ class RobotsServiceProvider extends ServiceProvider
     protected function getMigrationFileName(Filesystem $filesystem): string
     {
         $timestamp = date('Y_m_d_His');
-        return Collection::make($this->app->databasePath() . DIRECTORY_SEPARATOR . 'migrations' . DIRECTORY_SEPARATOR)
+
+        return Collection::make($this->app->databasePath().DIRECTORY_SEPARATOR.'migrations'.DIRECTORY_SEPARATOR)
             ->flatMap(function ($path) use ($filesystem) {
                 return $filesystem->glob($path.'*_create_robots_tables.php');
             })->push($this->app->databasePath()."/migrations/{$timestamp}_create_robots_tables.php")

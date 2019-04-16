@@ -18,7 +18,7 @@ class RobotsDBTest extends TestCase
 
         RobotsRow::create([
             'type' => Robots::ALLOW,
-            'action' => 'foo'
+            'action' => 'foo',
         ]);
 
         $arrayDBRows = RobotsRow::generateArray();
@@ -34,7 +34,7 @@ class RobotsDBTest extends TestCase
 
         RobotsRow::create([
             'type' => Robots::DISALLOW,
-            'action' => 'foo'
+            'action' => 'foo',
         ]);
 
         $arrayDBRows = RobotsRow::generateArray();
@@ -50,7 +50,7 @@ class RobotsDBTest extends TestCase
 
         RobotsRow::create([
             'type' => Robots::USER_AGENT,
-            'action' => 'foo'
+            'action' => 'foo',
         ]);
 
         $arrayDBRows = RobotsRow::generateArray();
@@ -66,7 +66,7 @@ class RobotsDBTest extends TestCase
 
         RobotsRow::create([
             'type' => Robots::HOST,
-            'action' => 'foo'
+            'action' => 'foo',
         ]);
 
         $arrayDBRows = RobotsRow::generateArray();
@@ -82,7 +82,7 @@ class RobotsDBTest extends TestCase
 
         RobotsRow::create([
             'type' => Robots::SITEMAP,
-            'action' => 'foo'
+            'action' => 'foo',
         ]);
 
         $arrayDBRows = RobotsRow::generateArray();

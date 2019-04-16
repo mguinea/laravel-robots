@@ -38,7 +38,7 @@ abstract class TestCase extends Orchestra
      */
     protected function setUpDatabase($app)
     {
-        include_once __DIR__ . '/../database/migrations/create_robots_tables.php.stub';
+        include_once __DIR__.'/../database/migrations/create_robots_tables.php.stub';
 
         (new \CreateRobotsTables())->up();
     }

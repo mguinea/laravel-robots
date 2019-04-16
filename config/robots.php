@@ -6,5 +6,5 @@ return [
     ],
     'table_names' => [
         'robot_rows' => 'robot_rows',
-    ]
+    ],
 ];

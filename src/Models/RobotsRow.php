@@ -18,8 +18,7 @@ class RobotsRow extends Model
     }
 
     /**
-     *
-     * Generates an array from DB data, compatible with Robots constructor
+     * Generates an array from DB data, compatible with Robots constructor.
      *
      * @return array
      */

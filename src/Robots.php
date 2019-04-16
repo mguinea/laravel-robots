@@ -89,7 +89,7 @@ class Robots implements RobotsContract
      */
     public function addComment(string $comment): RobotsContract
     {
-        $this->addLine(self::COMMENT . " $comment");
+        $this->addLine(self::COMMENT." $comment");
 
         return $this;
     }
