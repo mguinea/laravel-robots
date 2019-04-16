@@ -185,12 +185,18 @@ Remember that you can use Facade to avoid instantiation.
 <?php
     // Add a Host to the robots. Host: foo
     $robots->addHost('foo');
+    
+    // Add multiple hosts to the robots. Host: foo Host: bar
+    $robots->addHost(['foo', 'bar']);
 ```
 
 ```php
 <?php
     // Add a Sitemap to the robots. Sitemap: foo
     $robots->addSitemap('foo');
+    
+    // Add multiple sitemaps to the robots. Sitemap: foo Sitemap: bar
+    $robots->addSitemap(['foo', 'bar']);
 ```
 
 ```php
@@ -203,6 +209,9 @@ Remember that you can use Facade to avoid instantiation.
 <?php
     // Add a User-agent to the robots. User-agent: foo
     $robots->addUserAgent('foo');
+    
+    // Add multiple User-agents to the robots. User-agent: foo User-agent: bar
+    $robots->addUserAgent(['foo', 'bar']);
 ```
 
 ```php
@@ -221,7 +230,6 @@ Remember that you can use Facade to avoid instantiation.
 
 * [Laravel](https://laravel.com/) - The web framework
 * [Composer](https://getcomposer.org/) - Dependency manager
-* [Atom](https://atom.io/) - Text editor
 
 ## Versioning
 
@@ -234,3 +242,13 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## TODO
+- [ ] Migrations
+- [ ] VueJS Crud + Endpoints
+- [ ] Add Crawl-delay
+- [ ] Validations, override create and update
+- [ ] Common configurations
+- [ ] Suggestions
+- [ ] All tested
+- [ ] Page talking about robots.txt with detail like http://deteresa.com/archivo-robots-txt/ and link to package

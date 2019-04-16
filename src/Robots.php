@@ -6,6 +6,13 @@ use Robots\Contracts\Robots as RobotsContract;
 
 class Robots implements RobotsContract
 {
+    const ALLOW = 'Allow';
+    const DISALLOW = 'Disallow';
+    const HOST = 'Host';
+    const SITEMAP = 'Sitemap';
+    const USER_AGENT = 'User-agent';
+    const COMMENT = '#';
+
     /**
      * The rows of for the robots.
      *
@@ -65,11 +72,11 @@ class Robots implements RobotsContract
      * Add a allow rule to the robots.
      *
      * @param string|array $directories
-     * @return \Robots\Contracts\Robot;
+     * @return \Robots\Contracts\Robots;
      */
     public function addAllow($directories): RobotsContract
     {
-        $this->addRuleLine($directories, 'Allow');
+        $this->addRuleLine($directories, self::ALLOW);
 
         return $this;
     }
@@ -78,11 +85,11 @@ class Robots implements RobotsContract
      * Add a comment to the robots.
      *
      * @param string $comment
-     * @return \Robots\Contracts\Robot;
+     * @return \Robots\Contracts\Robots;
      */
     public function addComment(string $comment): RobotsContract
     {
-        $this->addLine("# $comment");
+        $this->addLine(self::COMMENT . " $comment");
 
         return $this;
     }
@@ -91,11 +98,11 @@ class Robots implements RobotsContract
      * Add a disallow rule to the robots.
      *
      * @param string|array $directories
-     * @return \Robots\Contracts\Robot;
+     * @return \Robots\Contracts\Robots;
      */
     public function addDisallow($directories): RobotsContract
     {
-        $this->addRuleLine($directories, 'Disallow');
+        $this->addRuleLine($directories, self::DISALLOW);
 
         return $this;
     }
@@ -103,12 +110,12 @@ class Robots implements RobotsContract
     /**
      * Add a Host to the robots.
      *
-     * @param string $host
-     * @return \Robots\Contracts\Robot;
+     * @param string|array $host
+     * @return \Robots\Contracts\Robots;
      */
-    public function addHost(string $host): RobotsContract
+    public function addHost($hosts): RobotsContract
     {
-        $this->addLine("Host: $host");
+        $this->addRuleLine($hosts, self::HOST);
 
         return $this;
     }
@@ -151,19 +158,19 @@ class Robots implements RobotsContract
     /**
      * Add a Sitemap to the robots.
      *
-     * @param string $sitemap
-     * @return \Robots\Contracts\Robot;
+     * @param string|array $sitemap
+     * @return \Robots\Contracts\Robots;
      */
-    public function addSitemap(string $sitemap): RobotsContract
+    public function addSitemap($sitemaps): RobotsContract
     {
-        $this->addLine("Sitemap: $sitemap");
+        $this->addRuleLine($sitemaps, self::SITEMAP);
 
         return $this;
     }
 
     /**
      * Add a spacer to the robots.
-     * @return \Robots\Contracts\Robot;
+     * @return \Robots\Contracts\Robots;
      */
     public function addSpacer(): RobotsContract
     {
@@ -175,12 +182,12 @@ class Robots implements RobotsContract
     /**
      * Add a User-agent to the robots.
      *
-     * @param string $userAgent
-     * @return \Robots\Contracts\Robot;
+     * @param string|array $userAgent
+     * @return \Robots\Contracts\Robots;
      */
-    public function addUserAgent(string $userAgent): RobotsContract
+    public function addUserAgent($userAgents): RobotsContract
     {
-        $this->addLine("User-agent: $userAgent");
+        $this->addRuleLine($userAgents, self::USER_AGENT);
 
         return $this;
     }
@@ -198,7 +205,7 @@ class Robots implements RobotsContract
     /**
      * Reset the rows.
      *
-     * @return \Robots\Contracts\Robot;
+     * @return \Robots\Contracts\Robots;
      */
     public function reset(): RobotsContract
     {

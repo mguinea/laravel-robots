@@ -72,6 +72,15 @@ class RobotsTest extends TestCase
         $this->assertEquals('Host: foo', $this->robots->generate());
     }
 
+    public function testAddHosts()
+    {
+        $this->robots->reset();
+
+        $this->robots->addHost(['foo', 'bar']);
+
+        $this->assertEquals("Host: foo\nHost: bar", $this->robots->generate());
+    }
+
     public function testAddSitemap()
     {
         $this->robots->reset();
@@ -79,6 +88,16 @@ class RobotsTest extends TestCase
         $this->robots->addSitemap('foo');
 
         $this->assertEquals('Sitemap: foo', $this->robots->generate());
+    }
+
+    public function testAddSitemaps()
+    {
+        $this->robots->reset();
+
+        $this->robots->addSitemap('foo');
+        $this->robots->addSitemap('bar');
+
+        $this->assertEquals("Sitemap: foo\nSitemap: bar", $this->robots->generate());
     }
 
     public function testAddSpacer()

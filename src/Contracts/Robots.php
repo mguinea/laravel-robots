@@ -31,18 +31,18 @@ interface Robots
     /**
      * Add a Host to the robots.
      *
-     * @param string $host
+     * @param string|array $host
      * @return \Robots\Contracts\Robot;
      */
-    public function addHost(string $host): self;
+    public function addHost($hosts): self;
 
     /**
      * Add a Sitemap to the robots.
      *
-     * @param string $sitemap
+     * @param string|array $sitemap
      * @return \Robots\Contracts\Robot;
      */
-    public function addSitemap(string $sitemap): self;
+    public function addSitemap($sitemaps): self;
 
     /**
      * Add a spacer to the robots.
@@ -53,10 +53,10 @@ interface Robots
     /**
      * Add a User-agent to the robots.
      *
-     * @param string $userAgent
+     * @param string|array $userAgent
      * @return \Robots\Contracts\Robot;
      */
-    public function addUserAgent(string $userAgent): self;
+    public function addUserAgent($userAgents): self;
 
     /**
      * Generate the robots data.
