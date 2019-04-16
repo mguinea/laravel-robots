@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateRobotsTables extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        $tableNames = config('robots.table_names');
+
+        Schema::create($tableNames['robot_rows'], function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('type');
+            $table->string('action');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        $tableNames = config('robots.table_names');
+
+        Schema::drop($tableNames['robot_rows']);
+    }
+}

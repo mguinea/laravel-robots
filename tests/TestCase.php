@@ -15,6 +15,8 @@ abstract class TestCase extends Orchestra
         parent::setUp();
 
         $this->robots = new Robots;
+
+        $this->setUpDatabase($this->app);
     }
 
     /**
@@ -27,5 +29,17 @@ abstract class TestCase extends Orchestra
         return [
             \Robots\RobotsServiceProvider::class,
         ];
+    }
+
+    /**
+     * Set up the database.
+     *
+     * @param \Illuminate\Foundation\Application $app
+     */
+    protected function setUpDatabase($app)
+    {
+        include_once __DIR__ . '/../database/migrations/create_robots_tables.php.stub';
+
+        (new \CreateRobotsTables())->up();
     }
 }
