@@ -2,8 +2,8 @@
 
 namespace Robots\Tests;
 
-use Robots\Robots;
 use Robots\Models\RobotsRow;
+use Robots\Robots;
 
 class RobotsDBTest extends TestCase
 {

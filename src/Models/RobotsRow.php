@@ -2,8 +2,8 @@
 
 namespace Robots\Models;
 
-use Robots\Robots;
 use Illuminate\Database\Eloquent\Model;
+use Robots\Robots;
 
 class RobotsRow extends Model
 {

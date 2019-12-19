@@ -2,8 +2,8 @@
 
 namespace Robots\Tests;
 
-use Robots\Robots;
 use Orchestra\Testbench\TestCase as Orchestra;
+use Robots\Robots;
 
 class RobotsConstructorTest extends Orchestra
 {
