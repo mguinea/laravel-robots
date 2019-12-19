@@ -9,11 +9,11 @@ build:
       version: 7.3
   dependencies:
     before:
-	  - composer require phpunit/phpunit:^8.4 --dev
+      - composer require phpunit/phpunit:^8.4 --dev
   tests:
     override:
-	  -
-	    command: vendor/bin/phpunit --coverage-clover=clover.xml
-	    coverage:
-		  file: clover.xml
-		  format: php-clover
+      -
+        command: vendor/bin/phpunit --coverage-clover=clover.xml
+        coverage:
+          file: clover.xml
+          format: php-clover
