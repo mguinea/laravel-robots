@@ -6,7 +6,7 @@ checks:
 build:
   environment:
     php:
-      version: 7.3
+      version: 7.2
   dependencies:
     before:
       - composer require phpunit/phpunit:^8.4 --dev
