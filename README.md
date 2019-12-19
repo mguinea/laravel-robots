@@ -8,7 +8,7 @@ If you need a detailed explanation about how robots.txt file works, visit http:/
 [![Laravel 6.x](https://img.shields.io/badge/Laravel-6.x-orange.svg)](http://laravel.com)
 [![Packagist](https://img.shields.io/packagist/dt/mguinea/laravel-robots.svg)](https://packagist.org/packages/mguinea/laravel-robots)
 [![Quality Score](https://img.shields.io/scrutinizer/g/mguinea/laravel-robots.svg)](https://scrutinizer-ci.com/g/mguinea/laravel-robots)
-[![Code Coverage](https://scrutinizer-ci.com/g/mguinea/laravel-robots/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mguinea/laravel-robots/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/mguinea/laravel-robots/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mguinea/laravel-robots/?branch=master)[![Build Status](https://scrutinizer-ci.com/g/mguinea/laravel-robots/badges/build.png?b=master)](https://scrutinizer-ci.com/g/mguinea/laravel-robots/build-status/master)
 [![StyleCI](https://styleci.io/repos/143919791/shield?branch=master)](https://styleci.io/repos/143919791)
 
 ### Installing
