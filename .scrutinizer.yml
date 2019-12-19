@@ -10,6 +10,7 @@ build:
   dependencies:
     before:
       - composer require phpunit/phpunit:^8.4 --dev
+      - composer require orchestra/testbench:^4.0 --dev
   tests:
     override:
       -
