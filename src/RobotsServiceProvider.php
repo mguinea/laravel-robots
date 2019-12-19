@@ -2,8 +2,8 @@
 
 namespace Robots;
 
-use Illuminate\Support\Collection;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;
 
 class RobotsServiceProvider extends ServiceProvider

@@ -2,8 +2,8 @@
 
 namespace Robots\Tests;
 
-use Robots\Robots;
 use Orchestra\Testbench\TestCase as Orchestra;
+use Robots\Robots;
 
 class RobotsConstructorTest extends Orchestra
 {
@@ -31,6 +31,7 @@ class RobotsConstructorTest extends Orchestra
             ],
         ]);
     }
+
     public function testComposition()
     {
         $expected = "Allow: foo\nAllow: bar\n";
@@ -40,6 +41,7 @@ class RobotsConstructorTest extends Orchestra
         $expected .= "User-agent: foo\nUser-agent: bar";
         $this->assertEquals($expected, $this->robots->generate());
     }
+
     public function testAllows()
     {
         $robots = new Robots([
