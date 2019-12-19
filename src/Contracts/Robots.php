@@ -8,7 +8,7 @@ interface Robots
      * Add a allow rule to the robots.
      *
      * @param string|array $directories
-     * @return \Robots\Contracts\Robot;
+     * @return self;
      */
     public function addAllow($directories): self;
 
@@ -16,7 +16,7 @@ interface Robots
      * Add a comment to the robots.
      *
      * @param string $comment
-     * @return \Robots\Contracts\Robot;
+     * @return self;
      */
     public function addComment(string $comment): self;
 
@@ -24,7 +24,7 @@ interface Robots
      * Add a disallow rule to the robots.
      *
      * @param string|array $directories
-     * @return \Robots\Contracts\Robot;
+     * @return self;
      */
     public function addDisallow($directories): self;
 
@@ -32,7 +32,7 @@ interface Robots
      * Add a Host to the robots.
      *
      * @param string|array $host
-     * @return \Robots\Contracts\Robot;
+     * @return self;
      */
     public function addHost($hosts): self;
 
@@ -40,13 +40,13 @@ interface Robots
      * Add a Sitemap to the robots.
      *
      * @param string|array $sitemap
-     * @return \Robots\Contracts\Robot;
+     * @return self;
      */
     public function addSitemap($sitemaps): self;
 
     /**
      * Add a spacer to the robots.
-     * @return \Robots\Contracts\Robot;
+     * @return self;
      */
     public function addSpacer(): self;
 
@@ -54,7 +54,7 @@ interface Robots
      * Add a User-agent to the robots.
      *
      * @param string|array $userAgent
-     * @return \Robots\Contracts\Robot;
+     * @return self;
      */
     public function addUserAgent($userAgents): self;
 
@@ -68,7 +68,7 @@ interface Robots
     /**
      * Reset the rows.
      *
-     * @return \Robots\Contracts\Robot;
+     * @return self;
      */
     public function reset(): self;
 }

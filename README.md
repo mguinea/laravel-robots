@@ -5,29 +5,18 @@ Laravel package to manage robots in an easy way.
 If you need a detailed explanation about how robots.txt file works, visit http://www.robotstxt.org/robotstxt.html
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
-[![Laravel 5.8](https://img.shields.io/badge/Laravel-5.8-orange.svg)](http://laravel.com)
+[![Laravel 6.x](https://img.shields.io/badge/Laravel-6.x-orange.svg)](http://laravel.com)
 [![Packagist](https://img.shields.io/packagist/dt/mguinea/laravel-robots.svg)](https://packagist.org/packages/mguinea/laravel-robots)
 [![Quality Score](https://img.shields.io/scrutinizer/g/mguinea/laravel-robots.svg)](https://scrutinizer-ci.com/g/mguinea/laravel-robots)
 [![Code Coverage](https://scrutinizer-ci.com/g/mguinea/laravel-robots/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mguinea/laravel-robots/?branch=master)
 [![StyleCI](https://styleci.io/repos/143919791/shield?branch=master)](https://styleci.io/repos/143919791)
-[![Build Status](https://travis-ci.org/mguinea/laravel-robots.svg?branch=master)](https://travis-ci.org/mguinea/laravel-robots)
 
 ### Installing
 
 You can install via Composer.
 
 ```bash
-$ composer require mguinea/laravel-robots
-```
-
-Or add the following to your composer.json file and run composer update:
-
-```json
-{
-    "require": {
-        "mguinea/laravel-robots": "^1.1.0"
-    }
-}
+composer require mguinea/laravel-robots
 ```
 
 ## Running the tests
@@ -35,7 +24,7 @@ Or add the following to your composer.json file and run composer update:
 Just execute
 
 ```bash
-$ composer test
+vendor/bin/phpunit
 ```
 
 Unit tests will test all methods from Robots class and its related facade.

@@ -13,7 +13,6 @@ class RobotsConstructorTest extends Orchestra
     public function setUp(): void
     {
         parent::setUp();
-
         $this->robots = new Robots([
             'allows' => [
                 'foo', 'bar',
@@ -32,7 +31,6 @@ class RobotsConstructorTest extends Orchestra
             ],
         ]);
     }
-
     public function testComposition()
     {
         $expected = "Allow: foo\nAllow: bar\n";
@@ -40,10 +38,8 @@ class RobotsConstructorTest extends Orchestra
         $expected .= "Host: foo\nHost: bar\n";
         $expected .= "Sitemap: foo\nSitemap: bar\n";
         $expected .= "User-agent: foo\nUser-agent: bar";
-
         $this->assertEquals($expected, $this->robots->generate());
     }
-
     public function testAllows()
     {
         $robots = new Robots([

@@ -2,6 +2,11 @@
 
 All notable changes to `laravel-robots` will be documented in this file
 
+## 2.0.0 - 2019-12-19
+- Update Orchestra testbench and phpunit to latest versions
+- Minor adjustments in tests setup
+- Checked compatibility with Laravel 6.x
+
 ## 1.0.0 - 2018-08-08
 - Stable version
 

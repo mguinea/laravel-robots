@@ -1,28 +1,19 @@
 filter:
-    excluded_paths: [tests/*]
-
+	excluded_paths:
+		- 'tests/*'
 checks:
-    php:
-        remove_extra_empty_lines: true
-        remove_php_closing_tag: true
-        remove_trailing_whitespace: true
-        fix_use_statements:
-            remove_unused: true
-            preserve_multiple: false
-            preserve_blanklines: true
-            order_alphabetically: true
-        fix_php_opening_tag: true
-        fix_linefeed: true
-        fix_line_ending: true
-        fix_identation_4spaces: true
-        fix_doc_comments: true
+	php: true
 build:
-    environment:
-        php: '7.1'
-    tests:
-        override:
-        -
-            command: composer test --coverage-clover=laravel-robots
-            coverage:
-                file: laravel-robots
-                format: clover
+	environment:
+		php:
+			version: 7.3
+	dependencies:
+		before:
+			- composer require phpunit/phpunit:^8.4 --dev
+	tests:
+		override:
+			-
+				command: vendor/bin/phpunit --coverage-clover=clover.xml
+				coverage:
+					file: clover.xml
+					format: php-clover
