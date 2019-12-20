@@ -15,11 +15,11 @@
         }
     ],
     "require": {
-        "php" : "^7.2"
+        "php" : "^7.3"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.4",
-		"orchestra/testbench": "^3.8|^4.0"
+		"orchestra/testbench": "^4.0"
     },
     "autoload": {
         "psr-4": {
@@ -31,12 +31,12 @@
             "Robots\\Tests\\": "tests"
         }
     },
-    "config": {
-        "sort-packages": true
-    },
     "scripts": {
       "test": "vendor/bin/phpunit",
       "test-coverage": "phpunit --coverage-html coverage"
+    },
+    "config": {
+      "sort-packages": true
     },
     "extra": {
         "laravel": {
@@ -44,7 +44,5 @@
                 "Robots\\RobotsServiceProvider"
             ]
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
