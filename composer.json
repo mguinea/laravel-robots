@@ -34,6 +34,10 @@
     "config": {
         "sort-packages": true
     },
+    "scripts": {
+      "test": "vendor/bin/phpunit",
+      "test-coverage": "phpunit --coverage-html coverage"
+    },
     "extra": {
         "laravel": {
             "providers": [
