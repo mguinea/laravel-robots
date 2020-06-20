@@ -1,8 +1,8 @@
 <?php
 
-namespace Robots;
+namespace Mguinea\Robots;
 
-use Robots\Contracts\Robots as RobotsContract;
+use Mguinea\Robots\Contracts\Robots as RobotsContract;
 
 class Robots implements RobotsContract
 {
@@ -72,7 +72,7 @@ class Robots implements RobotsContract
      * Add a allow rule to the robots.
      *
      * @param string|array $directories
-     * @return \Robots\Contracts\Robots;
+     * @return \Mguinea\Robots\Contracts\Robots;
      */
     public function addAllow($directories): RobotsContract
     {
@@ -85,7 +85,7 @@ class Robots implements RobotsContract
      * Add a comment to the robots.
      *
      * @param string $comment
-     * @return \Robots\Contracts\Robots;
+     * @return \Mguinea\Robots\Contracts\Robots;
      */
     public function addComment(string $comment): RobotsContract
     {
@@ -98,7 +98,7 @@ class Robots implements RobotsContract
      * Add a disallow rule to the robots.
      *
      * @param string|array $directories
-     * @return \Robots\Contracts\Robots;
+     * @return \Mguinea\Robots\Contracts\Robots;
      */
     public function addDisallow($directories): RobotsContract
     {
@@ -111,7 +111,7 @@ class Robots implements RobotsContract
      * Add a Host to the robots.
      *
      * @param string|array $host
-     * @return \Robots\Contracts\Robots;
+     * @return \Mguinea\Robots\Contracts\Robots;
      */
     public function addHost($hosts): RobotsContract
     {
@@ -159,7 +159,7 @@ class Robots implements RobotsContract
      * Add a Sitemap to the robots.
      *
      * @param string|array $sitemap
-     * @return \Robots\Contracts\Robots;
+     * @return \Mguinea\Robots\Contracts\Robots;
      */
     public function addSitemap($sitemaps): RobotsContract
     {
@@ -170,7 +170,7 @@ class Robots implements RobotsContract
 
     /**
      * Add a spacer to the robots.
-     * @return \Robots\Contracts\Robots;
+     * @return \Mguinea\Robots\Contracts\Robots;
      */
     public function addSpacer(): RobotsContract
     {
@@ -183,7 +183,7 @@ class Robots implements RobotsContract
      * Add a User-agent to the robots.
      *
      * @param string|array $userAgent
-     * @return \Robots\Contracts\Robots;
+     * @return \Mguinea\Robots\Contracts\Robots;
      */
     public function addUserAgent($userAgents): RobotsContract
     {
@@ -205,7 +205,7 @@ class Robots implements RobotsContract
     /**
      * Reset the rows.
      *
-     * @return \Robots\Contracts\Robots;
+     * @return \Mguinea\Robots\Contracts\Robots;
      */
     public function reset(): RobotsContract
     {

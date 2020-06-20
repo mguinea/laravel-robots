@@ -1,8 +1,8 @@
 <?php
 
-namespace Robots\Tests;
+namespace Mguinea\Robots\Tests;
 
-use Robots\Facades\Robots;
+use Mguinea\Robots\Facades\Robots;
 
 class RobotsFacadeTest extends TestCase
 {

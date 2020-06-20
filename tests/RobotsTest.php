@@ -1,6 +1,6 @@
 <?php
 
-namespace Robots\Tests;
+namespace Mguinea\Robots\Tests;
 
 class RobotsTest extends TestCase
 {

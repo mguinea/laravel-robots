@@ -1,13 +1,13 @@
 <?php
 
-namespace Robots\Tests;
+namespace Mguinea\Robots\Tests;
 
+use Mguinea\Robots\Robots;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Robots\Robots;
 
 abstract class TestCase extends Orchestra
 {
-    /** @var \Robots\Robots */
+    /** @var \Mguinea\Robots\Robots */
     protected $robots;
 
     public function setUp(): void
@@ -27,7 +27,7 @@ abstract class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            \Robots\RobotsServiceProvider::class,
+            \Mguinea\Robots\RobotsServiceProvider::class,
         ];
     }
 

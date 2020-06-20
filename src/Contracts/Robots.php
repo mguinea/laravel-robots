@@ -1,6 +1,6 @@
 <?php
 
-namespace Robots\Contracts;
+namespace Mguinea\Robots\Contracts;
 
 interface Robots
 {

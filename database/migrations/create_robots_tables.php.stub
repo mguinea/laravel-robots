@@ -13,7 +13,7 @@ class CreateRobotsTables extends Migration
      */
     public function up()
     {
-        $tableNames = config('robots.table_names');
+        $tableNames = config('laravel-robots.table_names');
 
         Schema::create($tableNames['robot_rows'], function (Blueprint $table) {
             $table->increments('id');
@@ -30,7 +30,7 @@ class CreateRobotsTables extends Migration
      */
     public function down()
     {
-        $tableNames = config('robots.table_names');
+        $tableNames = config('laravel-robots.table_names');
 
         Schema::drop($tableNames['robot_rows']);
     }
