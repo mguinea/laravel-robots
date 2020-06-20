@@ -1,6 +1,6 @@
 <?php
 
-namespace Robots\Facades;
+namespace Mguinea\Robots\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

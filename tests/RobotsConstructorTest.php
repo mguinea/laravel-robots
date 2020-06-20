@@ -1,13 +1,13 @@
 <?php
 
-namespace Robots\Tests;
+namespace Mguinea\Robots\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use Robots\Robots;
+use Mguinea\Robots\Robots;
 
 class RobotsConstructorTest extends Orchestra
 {
-    /** @var \Robots\Robots */
+    /** @var \Mguinea\Robots\Robots */
     protected $robots;
 
     public function setUp(): void

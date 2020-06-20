@@ -4,12 +4,35 @@ Laravel package to manage robots in an easy way.
 
 If you need a detailed explanation about how robots.txt file works, visit http://www.robotstxt.org/robotstxt.html
 
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
-[![Laravel 6.x](https://img.shields.io/badge/Laravel-6.x-orange.svg)](http://laravel.com)
-[![Packagist](https://img.shields.io/packagist/dt/mguinea/laravel-robots.svg)](https://packagist.org/packages/mguinea/laravel-robots)
-[![Quality Score](https://img.shields.io/scrutinizer/g/mguinea/laravel-robots.svg)](https://scrutinizer-ci.com/g/mguinea/laravel-robots)
-[![Code Coverage](https://scrutinizer-ci.com/g/mguinea/laravel-robots/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mguinea/laravel-robots/?branch=master)[![Build Status](https://scrutinizer-ci.com/g/mguinea/laravel-robots/badges/build.png?b=master)](https://scrutinizer-ci.com/g/mguinea/laravel-robots/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mguinea/laravel-robots/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mguinea/laravel-robots/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/mguinea/laravel-robots/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mguinea/laravel-robots/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/mguinea/laravel-robots/badges/build.png?b=master)](https://scrutinizer-ci.com/g/mguinea/laravel-robots/build-status/master)
 [![StyleCI](https://styleci.io/repos/143919791/shield?branch=master)](https://styleci.io/repos/143919791)
+[![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Laravel](https://img.shields.io/badge/Laravel-6.x-orange.svg)](http://laravel.com)
+[![Laravel](https://img.shields.io/badge/Laravel-7.x-orange.svg)](http://laravel.com)
+
+This package allows you to manage robots of your site dinamically allowing you to differenciate between environments or configurations.
+
+Migration to persist configuration is optional; you can change its data source.
+
+Once package is installed you can do these things:
+
+```php
+Route::get('robots.txt', function() {
+    $robots = new \Mguinea\Robots\Robots;
+
+    // If on the live server
+    if (App::environment() == 'production') {
+        $robots->addUserAgent('*')->addSitemap('sitemap.xml');
+    } else {
+        // If you're on any other server, tell everyone to go away.
+        $robots->addDisallow("/");
+    }
+
+    return response($robots->generate(), 200)->header('Content-Type', 'text/plain');
+});
+``` 
 
 ### Installing
 
@@ -36,10 +59,8 @@ Unit tests will test all methods from Robots class and its related facade.
 You can use Robots in routes file to generate a dynamic response
 
 ```php
-<?php
-
 Route::get('robots.txt', function() {
-    $robots = new \Robots\Robots;
+    $robots = new \Mguinea\Robots\Robots;
 
     // If on the live server
     if (App::environment() == 'production') {
@@ -60,7 +81,7 @@ You can use Robots facade in routes file to generate a dynamic response
 ```php
 <?php
 
-use Robots\Facades\Robots;
+use Mguinea\Robots\Facades\Robots;
 
 Route::get('robots.txt', function() {
 
@@ -85,7 +106,7 @@ If you prefer to write the original robots.txt file, just use the generator as y
 <?php
 
 use Illuminate\Http\File;
-use Robots\Robots;
+use Mguinea\Robots\Robots;
 
 class Anywhere
 {
@@ -110,7 +131,7 @@ Note that comments and spacers have been removed.
 <?php
 
 use Illuminate\Http\File;
-use Robots\Robots;
+use Mguinea\Robots\Robots;
 
 class Anywhere
 {
@@ -230,14 +251,4 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-
-## TODO
-- [ ] Migrations
-- [ ] VueJS Crud + Endpoints
-- [ ] Add Crawl-delay
-- [ ] Validations, override create and update
-- [ ] Common configurations
-- [ ] Suggestions
-- [ ] All tested
-- [ ] Page talking about robots.txt with detail like http://deteresa.com/archivo-robots-txt/ and link to package
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details

@@ -1,9 +1,9 @@
 <?php
 
-namespace Robots\Tests;
+namespace Mguinea\Robots\Tests;
 
-use Robots\Models\RobotsRow;
-use Robots\Robots;
+use Mguinea\Robots\Models\RobotsRow;
+use Mguinea\Robots\Robots;
 
 class RobotsDBTest extends TestCase
 {

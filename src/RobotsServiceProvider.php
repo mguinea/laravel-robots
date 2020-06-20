@@ -1,6 +1,6 @@
 <?php
 
-namespace Robots;
+namespace Mguinea\Robots;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;
@@ -23,7 +23,7 @@ class RobotsServiceProvider extends ServiceProvider
     public function boot(Filesystem $filesystem)
     {
         $this->publishes([
-            __DIR__.'/../config/robots.php' => config_path('robots.php'),
+            __DIR__.'/../config/laravel-robots.php' => config_path('laravel-robots.php'),
         ], 'config');
 
         $this->publishes([
@@ -42,11 +42,11 @@ class RobotsServiceProvider extends ServiceProvider
             return new Robots();
         });
 
-        $this->app->alias('robots', 'Robots\Robots');
+        $this->app->alias('robots', 'Mguinea\Robots');
 
         $this->mergeConfigFrom(
-            __DIR__.'/../config/robots.php',
-            'robots'
+            __DIR__.'/../config/laravel-robots.php',
+            'laravel-robots'
         );
     }
 

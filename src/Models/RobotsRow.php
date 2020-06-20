@@ -1,9 +1,9 @@
 <?php
 
-namespace Robots\Models;
+namespace Mguinea\Robots\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Robots\Robots;
+use Mguinea\Robots\Robots;
 
 class RobotsRow extends Model
 {
@@ -14,7 +14,7 @@ class RobotsRow extends Model
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
-        $this->setTable(config('robots.table_names.robot_rows'));
+        $this->setTable(config('laravel-robots.table_names.robot_rows'));
     }
 
     /**
@@ -24,14 +24,12 @@ class RobotsRow extends Model
      */
     public static function generateArray(): array
     {
-        $response = [];
-
-        $response['allows'] = static::where('type', Robots::ALLOW)->get('action')->toArray();
-        $response['disallows'] = static::where('type', Robots::DISALLOW)->get('action')->toArray();
-        $response['hosts'] = static::where('type', Robots::HOST)->get('action')->toArray();
-        $response['sitemaps'] = static::where('type', Robots::SITEMAP)->get('action')->toArray();
-        $response['userAgents'] = static::where('type', Robots::USER_AGENT)->get('action')->toArray();
-
-        return $response;
+        return [
+            'allows' => static::where('type', Robots::ALLOW)->get('action')->toArray(),
+            'disallows' => static::where('type', Robots::DISALLOW)->get('action')->toArray(),
+            'hosts' => static::where('type', Robots::HOST)->get('action')->toArray(),
+            'sitemaps' => static::where('type', Robots::SITEMAP)->get('action')->toArray(),
+            'userAgents' => static::where('type', Robots::USER_AGENT)->get('action')->toArray(),
+        ];
     }
 }
