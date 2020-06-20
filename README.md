@@ -241,14 +241,26 @@ Remember that you can use Facade to avoid instantiation.
 * [Laravel](https://laravel.com/) - The web framework
 * [Composer](https://getcomposer.org/) - Dependency manager
 
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
+
+## Security
+
+If you discover any security related issues, please email develop.marcguinea@gmail.com instead of using the issue tracker.
+
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/mguinea/laravel-robots/tags).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details
 
 ## Authors
 
 * **Marc Guinea** [MarcGuinea](https://www.marcguinea.com)
 
-## License
+## Acknowledgments
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details
+* [Readme best practices](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) from [PurpleBooth](https://github.com/PurpleBooth)
