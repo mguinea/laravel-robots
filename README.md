@@ -152,7 +152,8 @@ class Anywhere
             ],
             'userAgents' => [
                 'foo', 'bar'
-            ]
+            ],
+            'crawlDelay' => 10
         ]);
         
         return response($robots->generate(), 200)->header('Content-Type', 'text/plain');
@@ -222,6 +223,12 @@ Remember that you can use Facade to avoid instantiation.
     
     // Add multiple User-agents to the robots. User-agent: foo User-agent: bar
     $robots->addUserAgent(['foo', 'bar']);
+```
+
+```php
+<?php
+    // Add a crawl-delay to the robots. crawl-delay: 10
+    $robots->addCrawlDelay(10);
 ```
 
 ```php

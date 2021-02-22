@@ -12,6 +12,7 @@ class Robots implements RobotsContract
     const SITEMAP = 'Sitemap';
     const USER_AGENT = 'User-agent';
     const COMMENT = '#';
+    const CRAWL_DELAY = 'crawl-delay';
 
     /**
      * The rows of for the robots.
@@ -64,6 +65,10 @@ class Robots implements RobotsContract
                 foreach ($values as $value) {
                     $this->addUserAgent($value);
                 }
+            } elseif ($key === 'crawlDelay') {
+                foreach ($values as $value) {
+                    $this->addCrawlDelay($value);
+                }
             }
         }
     }
@@ -72,7 +77,7 @@ class Robots implements RobotsContract
      * Add a allow rule to the robots.
      *
      * @param string|array $directories
-     * @return \Mguinea\Robots\Contracts\Robots;
+     * @return RobotsContract;
      */
     public function addAllow($directories): RobotsContract
     {
@@ -85,7 +90,7 @@ class Robots implements RobotsContract
      * Add a comment to the robots.
      *
      * @param string $comment
-     * @return \Mguinea\Robots\Contracts\Robots;
+     * @return RobotsContract;
      */
     public function addComment(string $comment): RobotsContract
     {
@@ -98,7 +103,7 @@ class Robots implements RobotsContract
      * Add a disallow rule to the robots.
      *
      * @param string|array $directories
-     * @return \Mguinea\Robots\Contracts\Robots;
+     * @return RobotsContract;
      */
     public function addDisallow($directories): RobotsContract
     {
@@ -111,7 +116,7 @@ class Robots implements RobotsContract
      * Add a Host to the robots.
      *
      * @param string|array $host
-     * @return \Mguinea\Robots\Contracts\Robots;
+     * @return RobotsContract;
      */
     public function addHost($hosts): RobotsContract
     {
@@ -159,7 +164,7 @@ class Robots implements RobotsContract
      * Add a Sitemap to the robots.
      *
      * @param string|array $sitemap
-     * @return \Mguinea\Robots\Contracts\Robots;
+     * @return RobotsContract;
      */
     public function addSitemap($sitemaps): RobotsContract
     {
@@ -170,7 +175,7 @@ class Robots implements RobotsContract
 
     /**
      * Add a spacer to the robots.
-     * @return \Mguinea\Robots\Contracts\Robots;
+     * @return RobotsContract;
      */
     public function addSpacer(): RobotsContract
     {
@@ -183,11 +188,24 @@ class Robots implements RobotsContract
      * Add a User-agent to the robots.
      *
      * @param string|array $userAgent
-     * @return \Mguinea\Robots\Contracts\Robots;
+     * @return RobotsContract;
      */
     public function addUserAgent($userAgents): RobotsContract
     {
         $this->addRuleLine($userAgents, self::USER_AGENT);
+
+        return $this;
+    }
+
+    /**
+     * Add a allow rule to the robots.
+     *
+     * @param string|array $time
+     * @return RobotsContract;
+     */
+    public function addCrawlDelay($time): RobotsContract
+    {
+        $this->addRuleLine($time, self::CRAWL_DELAY);
 
         return $this;
     }
@@ -205,7 +223,7 @@ class Robots implements RobotsContract
     /**
      * Reset the rows.
      *
-     * @return \Mguinea\Robots\Contracts\Robots;
+     * @return RobotsContract;
      */
     public function reset(): RobotsContract
     {

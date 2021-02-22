@@ -101,4 +101,11 @@ class RobotsTest extends TestCase
             ->generate();
         $this->assertEquals('User-agent: foo', $response);
     }
+
+    public function testAddCrawlDelay()
+    {
+        $this->robots->reset();
+        $this->robots->addCrawlDelay(10);
+        $this->assertEquals('crawl-delay: 10', $this->robots->generate());
+    }
 }

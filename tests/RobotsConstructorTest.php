@@ -29,6 +29,9 @@ class RobotsConstructorTest extends Orchestra
             'userAgents' => [
                 'foo', 'bar',
             ],
+            'crawlDelay' => [
+                10
+            ]
         ]);
     }
 
@@ -38,7 +41,8 @@ class RobotsConstructorTest extends Orchestra
         $expected .= "Disallow: foo\nDisallow: bar\n";
         $expected .= "Host: foo\nHost: bar\n";
         $expected .= "Sitemap: foo\nSitemap: bar\n";
-        $expected .= "User-agent: foo\nUser-agent: bar";
+        $expected .= "User-agent: foo\nUser-agent: bar\n";
+        $expected .= "crawl-delay: 10";
         $this->assertEquals($expected, $this->robots->generate());
     }
 
