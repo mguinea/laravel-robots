@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Common configurations
 - Page talking about robots.txt with detail like http://deteresa.com/archivo-robots-txt/ and link to package
 
+## 3.1.0 - 2021-02-22
+- Added crawl-delay directive
+
 ## 3.0.0 - 2020-06-20
 - Renamed namespace to `Mguinea\Robots` instead of `Robots`
 - Updated [Readme](README.md)
