@@ -30,8 +30,8 @@ class RobotsConstructorTest extends Orchestra
                 'foo', 'bar',
             ],
             'crawlDelay' => [
-                10
-            ]
+                10,
+            ],
         ]);
     }
 
@@ -42,7 +42,7 @@ class RobotsConstructorTest extends Orchestra
         $expected .= "Host: foo\nHost: bar\n";
         $expected .= "Sitemap: foo\nSitemap: bar\n";
         $expected .= "User-agent: foo\nUser-agent: bar\n";
-        $expected .= "crawl-delay: 10";
+        $expected .= 'crawl-delay: 10';
         $this->assertEquals($expected, $this->robots->generate());
     }
 
