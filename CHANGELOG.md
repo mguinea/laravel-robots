@@ -7,7 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Sample CRUD
 - Manage robots by page
-- Add Crawl-delay
 - Validations, override create and update
 - Common configurations
 - Page talking about robots.txt with detail like http://deteresa.com/archivo-robots-txt/ and link to package
