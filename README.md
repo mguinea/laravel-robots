@@ -1,16 +1,20 @@
 # Laravel Robots
 
-Laravel package to manage robots in an easy way.
+Laravel package to manage robots easily.
 
 If you need a detailed explanation about how robots.txt file works, visit http://www.robotstxt.org/robotstxt.html
+
+<div style="text-align: center;"><a href="https://www.buymeacoffee.com/mguinea" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a></div>
+<div style="text-align: center;">
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mguinea/laravel-robots/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mguinea/laravel-robots/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/mguinea/laravel-robots/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mguinea/laravel-robots/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/mguinea/laravel-robots/badges/build.png?b=master)](https://scrutinizer-ci.com/g/mguinea/laravel-robots/build-status/master)
 [![StyleCI](https://styleci.io/repos/143919791/shield?branch=master)](https://styleci.io/repos/143919791)
 [![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Laravel](https://img.shields.io/badge/Laravel-6.x-orange.svg)](http://laravel.com)
-[![Laravel](https://img.shields.io/badge/Laravel-7.x-orange.svg)](http://laravel.com)
+[![Laravel](https://img.shields.io/badge/Laravel-8-orange.svg)](http://laravel.com)
+
+</div>
 
 This package allows you to manage robots of your site dinamically allowing you to differenciate between environments or configurations.
 
@@ -267,7 +271,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) f
 ## Authors
 
 * **Marc Guinea** [MarcGuinea](https://www.marcguinea.com)
-
-## Acknowledgments
-
-* [Readme best practices](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) from [PurpleBooth](https://github.com/PurpleBooth)
