@@ -14,11 +14,11 @@
 			<directory suffix=".php">./tests</directory>
 		</testsuite>
 	</testsuites>
-	<filter>
-		<whitelist>
-			<directory suffix=".php">src/</directory>
-		</whitelist>
-	</filter>
+	<coverage includeUncoveredFiles="true">
+		<include>
+			<directory suffix=".php">./src</directory>
+		</include>
+	</coverage>
 	<php>
 		<env name="API_DEBUG" value="false"/>
 		<env name="APP_ENV" value="testing"/>
