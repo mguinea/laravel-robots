@@ -20,7 +20,7 @@ checks:
 build:
   environment:
     php:
-      version: 7.3
+      version: 8.1
   dependencies:
     before:
       - composer require phpunit/phpunit:^9.0 --dev
