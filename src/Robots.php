@@ -31,7 +31,7 @@ class Robots implements RobotsContract
     /**
      * Robots constructor.
      *
-     * @param array $parameters
+     * @param  array  $parameters
      */
     public function __construct(array $parameters = [])
     {
@@ -76,7 +76,7 @@ class Robots implements RobotsContract
     /**
      * Add a allow rule to the robots.
      *
-     * @param string|array $directories
+     * @param  string|array  $directories
      * @return RobotsContract;
      */
     public function addAllow($directories): RobotsContract
@@ -89,7 +89,7 @@ class Robots implements RobotsContract
     /**
      * Add a comment to the robots.
      *
-     * @param string $comment
+     * @param  string  $comment
      * @return RobotsContract;
      */
     public function addComment(string $comment): RobotsContract
@@ -102,7 +102,7 @@ class Robots implements RobotsContract
     /**
      * Add a disallow rule to the robots.
      *
-     * @param string|array $directories
+     * @param  string|array  $directories
      * @return RobotsContract;
      */
     public function addDisallow($directories): RobotsContract
@@ -115,7 +115,7 @@ class Robots implements RobotsContract
     /**
      * Add a Host to the robots.
      *
-     * @param string|array $host
+     * @param  string|array  $host
      * @return RobotsContract;
      */
     public function addHost($hosts): RobotsContract
@@ -128,7 +128,7 @@ class Robots implements RobotsContract
     /**
      * Add a row to the robots.
      *
-     * @param string $row
+     * @param  string  $row
      */
     protected function addLine($row)
     {
@@ -138,7 +138,7 @@ class Robots implements RobotsContract
     /**
      * Add multiple rows to the robots.
      *
-     * @param string|array $rows
+     * @param  string|array  $rows
      */
     protected function addRows($rows)
     {
@@ -150,8 +150,8 @@ class Robots implements RobotsContract
     /**
      * Add a rule to the robots.
      *
-     * @param string|array $directories
-     * @param string       $rule
+     * @param  string|array  $directories
+     * @param  string  $rule
      */
     protected function addRuleLine($directories, $rule)
     {
@@ -163,7 +163,7 @@ class Robots implements RobotsContract
     /**
      * Add a Sitemap to the robots.
      *
-     * @param string|array $sitemap
+     * @param  string|array  $sitemap
      * @return RobotsContract;
      */
     public function addSitemap($sitemaps): RobotsContract
@@ -175,6 +175,7 @@ class Robots implements RobotsContract
 
     /**
      * Add a spacer to the robots.
+     *
      * @return RobotsContract;
      */
     public function addSpacer(): RobotsContract
@@ -187,7 +188,7 @@ class Robots implements RobotsContract
     /**
      * Add a User-agent to the robots.
      *
-     * @param string|array $userAgent
+     * @param  string|array  $userAgent
      * @return RobotsContract;
      */
     public function addUserAgent($userAgents): RobotsContract
@@ -200,7 +201,7 @@ class Robots implements RobotsContract
     /**
      * Add a allow rule to the robots.
      *
-     * @param string|array $time
+     * @param  string|array  $time
      * @return RobotsContract;
      */
     public function addCrawlDelay($time): RobotsContract
